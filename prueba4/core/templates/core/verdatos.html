@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'core/css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
+    <link href="{% static 'core/css/Estilos.css'%}" type="text/css" rel="stylesheet">    
+    <title>Document</title>
+    <style>
+        body {background-color:black;}
+    </style>
+</head>
+<body>
+    <!--Simplemente agarre mi navbar viejo-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button"> </button>
+        <div class="collapse navbar-collapse" id="opciones">   
+            <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'Form1' %}">Formulario 1</a> </li>
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'Form2' %}">Formulario 2</a> </li>
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'Form3' %}">Formulario 3</a> </li>
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'home' %}">Inicio</a> </li>           
+        </div>
+    </nav> 
+    <div class="row">
+    <table class="table">
+        <thead>
+            <tr><th scope="col">Raza</th><th scope="col">Edad</th>
+            <th scope="col">Nombre</th><th scope="col">Chip</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Raza</td></tr><tr><td>Edad</td></tr><tr><td>Nombre</td></tr><tr><td>Chip</td></tr>
+        {% for ve in mascotas %}
+        <tr><td>{{ve.raza}}</td></tr><tr><td>{{ve.edad}}</td></tr><tr><td>{{ve.nombre}}</td></tr><tr><td>{{ve.chip}}</td>
+        <td><a href="{% url 'Form2' ve.raza %}">Modificar</a></td>
+        <td><a href="{% url 'Form2' ve.raza %}">Elimintar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    <a href="{% url 'Form1' %}">Nueva mascota</a>
+    </div>
+    
+</body>
+</html>

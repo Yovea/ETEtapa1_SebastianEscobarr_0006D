@@ -1,0 +1,284 @@
+.titulo{
+    text-size-adjust: 40;
+    text-align: center;
+}
+
+.sb{
+    color: white;
+    text-size-adjust: 20;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+  background-color: black; 
+  border-bottom: 2px solid; 
+  border-color: rgb(157, 19, 9)
+}
+
+.cajitapulenta {
+    background-color:  #000000;
+    opacity: 0.9;
+    width: 100%;
+    height: 400px;
+  }
+
+  
+.cajitapulentacorreo {
+    background-color:  #000000;
+    opacity: 0.9;
+    width: 100%;
+    height: 400px;
+  }
+
+footer{
+    text-align: left;
+    text-size-adjust: 20;
+    background-color: dimgrey;
+    color: white;
+  }
+
+.p{
+    color: black;
+    text-size-adjust: 30;
+    text-align: left;
+}
+
+.tj{
+    color: black;
+    text-size-adjust: 40;
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+
+.CorreoElec{
+    padding: 15px 30px;
+    box-shadow: inherit;
+    border: inherit;
+    width: 40%;
+    margin: 180px;
+    font-size: 19px;
+    box-shadow: #b0b0b0 0px -2px 9px 0px;
+}
+
+.Sub_btn {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  right: 446px;
+  margin-top: 180px;
+  padding: 4px 15px;
+  border-radius: 10px;
+  background-color: #38085e;
+  cursor: pointer;
+}
+
+.Buy_btn {
+  position: absolute;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #38085e;
+  cursor: pointer;
+}
+
+
+.carousel-fade .carousel-item, .carousel-item img  {
+  max-height: 90vh;
+}
+
+footer{
+  background-color:#200536;
+  opacity: 0.9;
+}
+
+.presentacionpulenta{
+  width: 350px;
+  height: 350px;
+  position: sticky;
+  margin: 25px;
+  margin-left: 5cm;
+  float: left;
+  background-size: 100%, 100%;
+  animation:slideshow 12s infinite linear;
+  display: flex;
+  border-style: groove;
+}
+
+.textoindexr{
+  position: relative; 
+  text-align:left;
+  top: 40px;
+  color:white;
+  margin-left: 17cm;
+  margin-right: 4cm; 
+  text-shadow: 1px 1px orange;
+}
+
+.textoindexl{
+  position: relative; 
+  text-align: left; 
+  top: 90px;
+  color:white;
+  margin-left: 4cm; 
+  margin-right: 17cm; 
+  text-shadow: 1px 1px orange;
+}
+
+
+.textor{
+  position: relative; 
+  text-align:left;
+  top: 10px;
+  margin-left: 17cm;
+  margin-right: 4cm; 
+}
+
+.textol{
+  position: relative; 
+  text-align: left; 
+  top: 70px;  
+  margin-left: 4cm; 
+  margin-right: 17cm; 
+}
+
+.imagenr{
+  width: 350px;
+  height: 350px;
+  position: sticky;
+  margin: 25px;
+  margin-right: 4cm;
+  float: right;
+  border-style: groove
+}
+
+.imagenl{
+  width: 350px;
+  height: 350px;
+  position: sticky;
+  margin: 25px;
+  margin-left: 5cm;
+  float: left;
+  border-style: groove;
+}
+
+.hrw{
+  border-top: 1px solid;
+}
+
+.te{
+  text-size-adjust: 15;
+  text-align: center;
+}
+
+
+/*Me quiero matar, no pense que hacer la pagina responsive fuese ser tan doloroso*/
+@media screen and (max-width: 960px){
+  .navbar {
+    background-color: black; 
+    border-bottom: 2px solid; 
+    border-color: rgb(157, 19, 9);
+    height: 60px;
+  }
+
+  .Sub_btn {
+    position: absolute;
+    margin-top: 19.7%;
+    margin-right: -29%;
+
+  }
+  
+  .imagenr{
+    width: 200px;
+    height: 200px;
+    position: sticky;
+    margin: 25px;
+    margin-right: 4cm;
+
+  }
+  
+  .imagenl{
+    width: 200px;
+    height: 200px;
+    position: sticky;
+    margin: 25px;
+    margin-left: 5cm;
+
+  }
+ 
+  .textoindexr{
+    position: sticky; 
+    top: 80px;
+    text-shadow: 1px 1px purple;
+    margin-left: 12%;
+    padding-bottom: 25px;
+  }
+  
+  .textoindexl{
+    position: sticky; 
+    text-align: left; 
+    top: 90px; 
+    text-shadow: 1px 1px purple;
+    margin-right: 10%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+  }
+  
+  .textor{
+    position: sticky; 
+    text-align:left;
+    top: 40px;
+    margin-left: 10%;
+    padding-bottom: 25px;
+  }
+  
+  .textol{
+    position: sticky; 
+    text-align: left; 
+    top: 90px; 
+    margin-right: 10%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  .cajitapulenta {
+    background-color:  #111111;
+    height: inherit;
+  }
+
+  .presentacionpulenta{
+    width: 80%;
+    height: 200px;
+    min-height: 100px;
+    margin-left: 11%;
+    padding: 30%;
+    
+  }
+
+}
+
+/*boton pulento pulentoso*/
+.boton{
+  background-color: red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 10px 24px;
+  float: right;
+}

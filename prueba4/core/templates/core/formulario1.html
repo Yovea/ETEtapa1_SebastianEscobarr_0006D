@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'core/css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
+    <link href="{% static 'core/css/Estilos.css'%}" type="text/css" rel="stylesheet">    
+    <title>Document</title>
+    <style>
+        body {background-color:black;}
+    </style>
+</head>
+<body>
+    <!--Simplemente agarre mi navbar viejo-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button"> </button>
+        <div class="collapse navbar-collapse" id="opciones">   
+            <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'Form1' %}">Formulario 1</a> </li>
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'Form2' %}">Formulario 2</a> </li>
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'Form3' %}">Formulario 3</a> </li>
+            <li class="nav-item"> <a class="nav-link  active" href="{% url 'home' %}">Ver datos</a> </li>           
+        </div>
+    </nav> 
+    <h1>Ingresar datos</h1>
+    <script>
+        $(function() 
+        {
+          $("formulario").validate({
+               rules: {
+                raza: "required",
+                edad: "required",
+                nombre: "required",
+                chip: "required",
+                      },   
+                      
+                 messages: 
+                  {
+                    raza: {
+                      required: 'Ingresar Raza',
+                    },
+                    edad: {
+                      required: 'Ingresar la edad',
+                  },
+                  nombre:{
+                      required: 'Ingrese el nombre',
+                      
+                  },
+                  Chip:{
+                      required: 'Ingrese su respuesta',
+                  },
+              }
+          });
+      }); 
+    </script>
+
+    <div class="row">
+        <form method="POST" action="" id="formulario">
+            {% csrf_token %}
+            <div class="form-group">
+                {{MascotasForm.raza}}
+            </div>
+            <div class="form-group">
+                {{MascotasForm.edad}}
+            </div>
+            <div class="form-group">
+                {{MascotasForm.nombre}}
+            </div>
+            <div class="form-group">
+                {{MascotasForm.chip}}
+            </div>
+            <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+            <input type="reset" class="btn btn-danger" id="limpiar" value="Limpiar">
+        </form>
+    </div>
+    
+</body>
+</html>

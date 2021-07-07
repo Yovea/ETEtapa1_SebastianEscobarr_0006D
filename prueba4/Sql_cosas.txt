@@ -1,0 +1,13 @@
+--Sinceramente al intentar hacer las migraciones para la base de datos tuve un error del cual poco pude encontrar, sin embargo continúe trabajando en la página, 
+espero que no sea tanto el problema con ello, aún asi la página tiene puesta la siguiente cuenta junto al script de creacion:
+
+alter session set "_ORACLE_SCRIPT"=true; --Ejecutar solo
+
+create user aaaa identified by 1234;
+grant connect to aaaa;
+grant resource to aaaa;
+grant create table to aaaa;
+alter user aaaa default tablespace users quota unlimited on users;
+
+Debido a que no pude hacer las migraciones, tampoco pude crear el Superuser, por lo cual no tengo los permisos para ingresar, espero que se entienda y mi nota no sufra 
+tanto por ello.

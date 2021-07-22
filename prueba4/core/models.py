@@ -44,13 +44,13 @@ def getImagenDefault():
 
 #Esta wea es el pulento modelo
 class colaborador(AbstractBaseUser):
-    email               = models.EmailField(max_length=200, unique=True, verbose_name="email")
-    password            = models.CharField(max_length=128, verbose_name="Contraseña")
+    email               = models.EmailField(max_length=100, unique=True, verbose_name="email")
+    password            = models.CharField(max_length=12, verbose_name="Contraseña")
     fotoPerfil          = models.ImageField(max_length=255, upload_to=getImagenPerfilPath, null=True, blank=True, default=getImagenDefault, verbose_name="Foto de Perfil")
-    rut                 = models.CharField(max_length=13, verbose_name="RUT sin digito verificador", primary_key=True)
+    rut                 = models.CharField(max_length=8, verbose_name="RUT sin digito verificador", primary_key=True)
     rutD                = models.CharField(max_length=1, verbose_name="Verificador RUT")
     nombre              = models.CharField(max_length=200, verbose_name="Nombre")
-    fono                = models.CharField(max_length=8, verbose_name="Fono")
+    fono                = models.CharField(max_length=9, verbose_name="Fono")
     direccion           = models.CharField(max_length=200, verbose_name="Direccion")
     pais                = models.CharField(max_length=20, verbose_name="Pais")
     esAdmin             = models.BooleanField(default=False, verbose_name="Es Administrador?")

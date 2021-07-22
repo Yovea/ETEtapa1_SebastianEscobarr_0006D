@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Mascotas
-from .forms MascotasForm
+from .models import colaborador
+from .forms ColaboradorForm
 
 # Create your views here.
 def home(request):
@@ -11,15 +11,15 @@ def formulario1(request):
 
 def formulario2(request, id):
 
-    mascotas = Mascotas.objects.get(raza=id)
+    colaborador = colaborador.objects.get(raza=id)
 
     datos = {
-        'mascotas': MascotasForm(instance=mascotas)
+        'colaborador': ColaboradorForm(instance=colaborador)
     }
 
 if request.method== 'POST':
 
-    formulario = MascotasForm(data=request.POST, instance=mascotas)
+    formulario = ColaboradorForm(data=request.POST, instance=colaborador)
 
     if formulario.is.valid:
 
@@ -31,16 +31,16 @@ if request.method== 'POST':
 
 def formulario3(request, id):
 
-    mascotas = Mascotas.objects.get(raza=id)
+    colaborador = colaborador.objects.get(raza=id)
 
-    mascotas.delete()
+    colaborador.delete()
 
     return redirect(to="VerD")
 
 def verdatos(request):
-    mascotas=Mascotas.objects.all()
+    colaborador=colaborador.objects.all()
 
     datos = {
-        'mascotas': mascotas
+        'colaborador': colaborador
     }
     return render(request, 'core/verdatos.html', datos)

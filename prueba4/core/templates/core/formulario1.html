@@ -28,27 +28,43 @@
         {
           $("formulario").validate({
                rules: {
-                raza: "required",
-                edad: "required",
+                email: "required",
+                password: "required",
+                fotoP: "required",
+                rut: "required",
+                rutD: "required",
                 nombre: "required",
-                chip: "required",
+                fono: "required",
+                direccion: "required",
+                pais: "required", 
                       },   
                       
                  messages: 
                   {
-                    raza: {
-                      required: 'Ingresar Raza',
+                    email: {
+                      required: 'Ingresar Email',
                     },
-                    edad: {
-                      required: 'Ingresar la edad',
-                  },
-                  nombre:{
-                      required: 'Ingrese el nombre',
-                      
-                  },
-                  Chip:{
-                      required: 'Ingrese su respuesta',
-                  },
+                    password: {
+                      required: 'Ingresar contraseña',
+                    },
+                    fotoP: {
+                      required: 'Foto?',
+                    },
+                    rut: {
+                      required: 'Ingresar rut'
+                    },
+                    rutD: {
+                      required: 'Ingresar digito verificador'
+                    },
+                    fono: {
+                      required: 'Ingresar numero telefonico'
+                    },
+                    direccion:{
+                      required: 'Ingrese su direccion',
+                    },
+                    pais: {
+                      required: 'Ingresar pais'
+                    },
               }
           });
       }); 
@@ -58,16 +74,31 @@
         <form method="POST" action="" id="formulario">
             {% csrf_token %}
             <div class="form-group">
-                {{MascotasForm.raza}}
+                {{ColaboradorForm.email}}
             </div>
             <div class="form-group">
-                {{MascotasForm.edad}}
+                {{ColaboradorForm.password}}
             </div>
             <div class="form-group">
-                {{MascotasForm.nombre}}
+                {{ColaboradorForm.fotoP}}
             </div>
             <div class="form-group">
-                {{MascotasForm.chip}}
+                {{ColaboradorForm.rut}}
+            </div>
+            <div class="form-group">
+                {{ColaboradorForm.rutD}}
+            </div>
+            <div class="form-group">
+                {{ColaboradorForm.nombre}}
+            </div>
+            <div class="form-group">
+                {{ColaboradorForm.fono}}
+            </div>
+            <div class="form-group">
+                {{ColaboradorForm.direccion}}
+            </div>
+            <div class="form-group">
+                {{ColaboradorForm.pais}}
             </div>
             <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
             <input type="reset" class="btn btn-danger" id="limpiar" value="Limpiar">

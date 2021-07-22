@@ -25,21 +25,23 @@
     <div class="row">
     <table class="table">
         <thead>
-            <tr><th scope="col">Raza</th><th scope="col">Edad</th>
-            <th scope="col">Nombre</th><th scope="col">Chip</th>
+            <tr><th scope="col">email</th><th scope="col">password</th><th scope="col">fotoP</th><th scope="col">rut</th>
+            <th scope="col">rutD</th><th scope="col">Nombre</th><th scope="col">fono</th><th scope="col">direccion</th><th scope="col">pais</th>
         </tr>
     </thead>
     <tbody>
-        <tr><td>Raza</td></tr><tr><td>Edad</td></tr><tr><td>Nombre</td></tr><tr><td>Chip</td></tr>
-        {% for ve in mascotas %}
-        <tr><td>{{ve.raza}}</td></tr><tr><td>{{ve.edad}}</td></tr><tr><td>{{ve.nombre}}</td></tr><tr><td>{{ve.chip}}</td>
-        <td><a href="{% url 'Form2' ve.raza %}">Modificar</a></td>
-        <td><a href="{% url 'Form2' ve.raza %}">Elimintar</a></td>
+        <tr><td>email</td></tr><tr><td>password</td></tr><tr><td>fotoP</td></tr><tr><td>rut</td></tr><td><tr>rutD</tr></td><td><tr>nombre</tr></td><td><tr>fono</tr></td>
+        <td><tr>direccion</tr></td><td><tr>pais</tr></td>
+        {% for ve in colaborador %}
+        <tr><td>{{ve.email}}</td></tr><tr><td>{{ve.password}}</td></tr><tr><td>{{ve.fotoP}}</td></tr><tr><td>{{ve.rut}}</td></tr><td><tr>{{ve.rutD}}</tr></td>
+        <td><tr>{{ve.nombre}}</tr></td><td><tr>{{ve.fono}}</tr></td><td><tr>{{ve.direccion}}</tr></td><td><tr>{{ve.pais}}</td>
+        <td><a href="{% url 'Form2' ve.email %}">Modificar</a></td>
+        <td><a href="{% url 'Form2' ve.email %}">Elimintar</a></td>
         </tr>
         {% endfor %}
-    </tbody>
+        </tbody>
     </table>
-    <a href="{% url 'Form1' %}">Nueva mascota</a>
+    <a href="{% url 'Form1' %}">Nuevo usuario</a>
     </div>
     
 </body>

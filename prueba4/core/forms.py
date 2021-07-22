@@ -1,9 +1,9 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Mascotas
+from .models import colaborador
 
-class MascotasForm(ModelForm):
+class ColaboradorForm(ModelForm):
 
     class Meta:
-        model = Mascotas
-        fields=['raza', 'edad', 'nombre', 'chip']
+        model = colaborador
+        fields=['email', 'password', 'fotoP', 'rut', 'rutD', 'nombre', 'fono', 'direccion', 'pais', 'esAdmin', 'is_staff']
